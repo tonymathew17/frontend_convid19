@@ -1,1 +1,6 @@
-<p>Countries Component Works!</p>
+<h4>Number of Affected Countries: {{countriesCount}}</h4>
+<div>
+    <li *ngFor="let country of countries">
+        <span>{{country}}</span>
+    </li>
+</div>

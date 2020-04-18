@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { CountriesComponent } from './countries/countries.component';
+import { Covid19Service } from './services/get-covid19-data';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { CountriesComponent } from './countries/countries.component';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [Covid19Service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
