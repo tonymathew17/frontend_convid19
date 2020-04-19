@@ -21,4 +21,11 @@ export class CountriesComponent implements OnInit {
             this.countries = data['countries'];
         });
     }
+
+    countrySelected(country: string) {
+        console.log(`Clicked on : ${country}!`);
+        this.covid19Service.getCountry(country).subscribe(data => {
+            console.log(`${JSON.stringify(data)}`);
+        });
+    }
 }
